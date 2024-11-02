@@ -1,101 +1,102 @@
-import Image from "next/image";
+"use client"
+
+import { ArrowRight, Check, Heart, Shield, Zap } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-[#F5E6D3] text-[#8B4513]">
+      <main>
+        <section className="py-20 bg-[url('/placeholder.svg?height=600&width=1600')] bg-cover bg-center">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl font-bold mb-6 text-white shadow-text">Crafted for Health</h1>
+            <p className="text-2xl mb-8 text-white shadow-text">A complete meal loved by dogs</p>
+            <Link
+              href="/products"
+              className="inline-flex items-center bg-[#8B4513] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#A0522D] transition-colors"
+            >
+              Explore Our Products <ArrowRight className="ml-2" />
+            </Link>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-semibold mb-12 text-center">Why Choose Big Heart Feeds?</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <Heart className="mx-auto mb-4 text-[#A0522D] w-16 h-16" />
+                <h3 className="text-xl font-semibold mb-2">Made with Love</h3>
+                <p>Our recipes are crafted with care to ensure your dog gets the best nutrition possible.</p>
+              </div>
+              <div className="text-center">
+                <Shield className="mx-auto mb-4 text-[#A0522D] w-16 h-16" />
+                <h3 className="text-xl font-semibold mb-2">Quality Ingredients</h3>
+                <p>We use only high-quality, locally-sourced ingredients in all our dog food products.</p>
+              </div>
+              <div className="text-center">
+                <Zap className="mx-auto mb-4 text-[#A0522D] w-16 h-16" />
+                <h3 className="text-xl font-semibold mb-2">Balanced Nutrition</h3>
+                <p>Our formulas are designed to provide complete and balanced nutrition for dogs of all ages.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Happy dog eating Big Heart Feeds"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="md:w-1/2 md:pl-12">
+                <h2 className="text-3xl font-semibold mb-6">The Big Heart Difference</h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <Check className="mr-2 text-[#A0522D] flex-shrink-0 mt-1" />
+                    <span>Nutritionally balanced for optimal health</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="mr-2 text-[#A0522D] flex-shrink-0 mt-1" />
+                    <span>Promotes healthy digestion and nutrient absorption</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="mr-2 text-[#A0522D] flex-shrink-0 mt-1" />
+                    <span>Supports strong bones, teeth, and muscles</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="mr-2 text-[#A0522D] flex-shrink-0 mt-1" />
+                    <span>Enhances coat health and skin condition</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="mr-2 text-[#A0522D] flex-shrink-0 mt-1" />
+                    <span>Boosts immune system for overall wellbeing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-semibold mb-8">Ready to Give Your Dog the Best?</h2>
+            <Link
+              href="/products"
+              className="inline-flex items-center bg-[#8B4513] text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-[#A0522D] transition-colors"
+            >
+              Shop Now <ArrowRight className="ml-2" />
+            </Link>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
-  );
+  )
 }
