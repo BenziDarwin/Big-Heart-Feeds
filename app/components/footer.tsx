@@ -3,7 +3,25 @@
 import Link from "next/link";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
+  const loadMetricoolScript = () => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://tracker.metricool.com/resources/be.js";
+    script.onload = () => {
+      // Initialize Metricool Tracker
+      (window as any).beTracker?.t({
+        hash: "935e6458658af8ce14a20a1055e7e318",
+      });
+    };
+    document.head.appendChild(script);
+  };
+
+  // Load the script on the client side only
+  if (typeof window !== "undefined") {
+    loadMetricoolScript();
+  }
+
   return (
     <footer className="bg-[#8B4513] text-white py-8">
       <div className="container mx-auto px-4">
