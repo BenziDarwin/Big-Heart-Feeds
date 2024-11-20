@@ -1,6 +1,4 @@
 "use client"
-
-import { Star } from 'lucide-react'
 import Image from 'next/image'
 
 
@@ -47,7 +45,7 @@ export default function ProductsPage() {
     },
     {
       name: "Big Heart Fry Food",
-      weight: "500g",
+      weight: "5kg",
       image: "/images/fry.jpg",
       description: "Specially formulated for baby fish (fry) growth and development.",
       features: [
