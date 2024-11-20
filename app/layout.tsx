@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     description: "Premium dog food for health and happiness.",
     images: [
       {
-        url: "/images/adult-dog.jpg",  // Replace with your image path
+        url: "/images/adult-dog.jpg",
         width: 1200,
         height: 630,
-        alt: "Big Heart Feeds offers nutritious food for dogs",
+        alt: "Big Heart Feeds offers premium, nutritionally balanced dog food. Crafted with love for your canine companion's health and happiness.",
       },
     ],
-  }
+  },
 };
 
 export default function RootLayout({
