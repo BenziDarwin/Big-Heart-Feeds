@@ -1,43 +1,57 @@
-"use client"
+"use client";
 
-import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react'
-import Image from 'next/image'
-import { useState } from 'react'
+import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    alert('Thank you for your message. We will get back to you soon!')
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    alert("Thank you for your message. We will get back to you soon!");
+  };
 
   return (
     <div className="min-h-screen bg-[#F5E6D3] text-[#8B4513]">
       <main className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center">Get in Touch with Big Heart Feeds</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          Get in Touch with Big Heart Feeds
+        </h1>
         <p className="text-center text-lg mb-12 max-w-2xl mx-auto">
-          We're always here to help with any questions about our products, nutrition advice for your furry friends, or anything else you'd like to discuss. Reach out to us using the form below or through our contact information.
+          We're always here to help with any questions about our products,
+          nutrition advice for your furry friends, or anything else you'd like
+          to discuss. Reach out to us using the form below or through our
+          contact information.
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-16">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-3xl font-semibold mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Your Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -50,7 +64,12 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Your Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -63,7 +82,12 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Subject
+                </label>
                 <select
                   id="subject"
                   name="subject"
@@ -81,7 +105,12 @@ export default function ContactPage() {
                 </select>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Your Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -102,7 +131,7 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
-          
+
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h2 className="text-3xl font-semibold mb-6">Our Information</h2>
@@ -149,5 +178,5 @@ export default function ContactPage() {
         </div> */}
       </main>
     </div>
-  )
+  );
 }

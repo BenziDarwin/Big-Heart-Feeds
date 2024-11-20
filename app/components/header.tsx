@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-[#F5E6D3] shadow-md">
@@ -20,19 +20,33 @@ export default function Header() {
               height={80}
               className="mr-2"
             />
-            <span className="text-[#8B4513] text-xl font-bold">Big Heart Feeds</span>
+            <span className="text-[#8B4513] text-xl font-bold">
+              Big Heart Feeds
+            </span>
           </Link>
           <nav className="hidden md:flex space-x-6">
-            <Link href="/" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Home
             </Link>
-            <Link href="/products" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/products"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Our Products
             </Link>
-            <Link href="/about" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/about"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               About Us
             </Link>
-            <Link href="/contact" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/contact"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Contact
             </Link>
           </nav>
@@ -46,21 +60,33 @@ export default function Header() {
         </div>
         {isMenuOpen && (
           <nav className="mt-4 flex flex-col space-y-2 md:hidden">
-            <Link href="/" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Home
             </Link>
-            <Link href="/products" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/products"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Our Products
             </Link>
-            <Link href="/about" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/about"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               About Us
             </Link>
-            <Link href="/contact" className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors">
+            <Link
+              href="/contact"
+              className="text-[#8B4513] hover:text-[#A0522D] font-semibold transition-colors"
+            >
               Contact
             </Link>
           </nav>
         )}
       </div>
     </header>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Link from 'next/link'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import Link from "next/link";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,9 +15,21 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/products" className="hover:underline">Our Products</Link></li>
-              <li><Link href="/about" className="hover:underline">About Us</Link></li>
+              <li>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="hover:underline">
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -31,18 +43,30 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-[#A0522D] flex flex-col md:flex-row justify-between items-center">
           <p>&copy; 2024 Big Heart Feeds. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-[#F5E6D3] transition-colors" aria-label="Facebook">
+            <a
+              href="#"
+              className="hover:text-[#F5E6D3] transition-colors"
+              aria-label="Facebook"
+            >
               <Facebook />
             </a>
-            <a href="#" className="hover:text-[#F5E6D3] transition-colors" aria-label="Instagram">
+            <a
+              href="#"
+              className="hover:text-[#F5E6D3] transition-colors"
+              aria-label="Instagram"
+            >
               <Instagram />
             </a>
-            <a href="#" className="hover:text-[#F5E6D3] transition-colors" aria-label="Twitter">
+            <a
+              href="#"
+              className="hover:text-[#F5E6D3] transition-colors"
+              aria-label="Twitter"
+            >
               <Twitter />
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

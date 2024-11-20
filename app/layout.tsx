@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +18,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Big Heart Feeds | Nutritious Dog Food",
-  description: "Big Heart Feeds offers premium, nutritionally balanced dog food. Crafted with love for your canine companion's health and happiness.",
+  description:
+    "Big Heart Feeds offers premium, nutritionally balanced dog food. Crafted with love for your canine companion's health and happiness.",
   openGraph: {
     title: "Big Heart Feeds | Nutritious Dog Food",
     description: "Premium dog food for health and happiness.",
@@ -42,9 +44,31 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
+        {" "}
+        <Head>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+            function loadScript(a){
+              var b=document.getElementsByTagName("head")[0],
+                  c=document.createElement("script");
+              c.type="text/javascript";
+              c.src="https://tracker.metricool.com/resources/be.js";
+              c.onreadystatechange=a;
+              c.onload=a;
+              b.appendChild(c);
+            }
+            loadScript(function(){
+              beTracker.t({hash:"935e6458658af8ce14a20a1055e7e318"});
+            });
+          `,
+            }}
+          />
+        </Head>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
