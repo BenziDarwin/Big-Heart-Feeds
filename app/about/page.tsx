@@ -23,7 +23,7 @@ export default function AboutPage() {
             <div className="md:w-full px-10">
               <h2 className="text-3xl font-semibold mb-4">Our Story</h2>
               <p className="mb-4">
-                Founded in 2024, Big Heart Feeds emerged from a passion for providing high-quality nutrition to our canine companions. Our journey began in Nakuwadde-Bulenga, Uganda, where we noticed a gap in the market for locally-produced dog food that met international nutritional standards.
+                Big Heart Feeds emerged from a passion for providing high-quality nutrition to our canine companions. Our journey began in Nakuwadde-Bulenga, Uganda, where we noticed a gap in the market for locally-produced dog food that met international nutritional standards.
               </p>
               <p>
                 What started as a small family-run operation has grown into a trusted name in pet nutrition. Our commitment to quality, innovation, and the well-being of pets has been the driving force behind our success and continues to guide our path forward.

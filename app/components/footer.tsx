@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Big Heart Feeds</h3>
-            <p>Crafting nutritious meals for your beloved dogs since 2020.</p>
+            <p>Crafting nutritious meals for your beloved dogs.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
