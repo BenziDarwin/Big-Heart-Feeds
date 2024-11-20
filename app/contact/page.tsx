@@ -132,7 +132,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
+        {/* <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl font-semibold mb-6 text-center">Find Us</h2>
           <p className="text-center mb-8 text-lg">
             Located in the heart of Nakuwadde-Bulenga, our facility is easily accessible. Come visit us to learn more about our products and see our commitment to quality firsthand.
@@ -146,7 +146,7 @@ export default function ContactPage() {
               className="rounded-lg object-cover"
             />
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
   )

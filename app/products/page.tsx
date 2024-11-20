@@ -9,7 +9,7 @@ export default function ProductsPage() {
     {
       name: "Big Heart Adult Dog Food",
       weight: "5kg",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/adult-dog.jpg",
       description: "Complete and balanced nutrition for adult dogs.",
       features: [
         "High-quality protein sources",
@@ -17,12 +17,12 @@ export default function ProductsPage() {
         "Omega-3 and Omega-6 fatty acids for healthy skin and coat",
         "Fiber blend for digestive health"
       ],
-      price: "UGX 50,000"
+      price: "UGX 65,000"
     },
     {
       name: "Big Heart Puppy Formula",
       weight: "5kg",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/puppy.jpg",
       description: "Specially formulated for growing puppies.",
       features: [
         "DHA for brain and vision development",
@@ -30,22 +30,36 @@ export default function ProductsPage() {
         "Easily digestible proteins",
         "Antioxidants for immune support"
       ],
-      price: "UGX 55,000"
+      price: "UGX 70,000"
     },
     {
-      name: "Big Heart Senior Dog Food",
+      name: "Big Heart Fish Food",
       weight: "5kg",
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Tailored nutrition for older dogs.",
+      image: "/images/fish.jpg",
+      description: "Nutritious food for fish health and growth.",
       features: [
-        "Glucosamine and chondroitin for joint health",
-        "L-carnitine for maintaining healthy weight",
-        "Antioxidants for cognitive function",
-        "Balanced minerals for heart and kidney health"
+        "Rich in proteins for muscle growth",
+        "Vitamins and minerals for immune support",
+        "Enhances natural colors",
+        "Suitable for daily feeding"
       ],
-      price: "UGX 52,000"
+      price: "UGX 35,000"
+    },
+    {
+      name: "Big Heart Fry Food",
+      weight: "500g",
+      image: "/images/fry.jpg",
+      description: "Specially formulated for baby fish (fry) growth and development.",
+      features: [
+        "High in protein for growth",
+        "Fine particles for easy consumption",
+        "Supports immune health",
+        "Boosts survival rates of fry"
+      ],
+      price: "UGX 40,000"
     }
-  ]
+  ];
+  
 
   return (
     <div className="min-h-screen bg-[#F5E6D3] text-[#8B4513]">
@@ -53,7 +67,7 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8 text-center">Our Products</h1>
           
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Filter Products</h2>
             <div className="flex flex-wrap gap-4">
               <select className="bg-white border border-[#8B4513] rounded px-4 py-2">
@@ -69,7 +83,7 @@ export default function ProductsPage() {
                 <option>Large Breed</option>
               </select>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
@@ -96,17 +110,12 @@ export default function ProductsPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="flex items-center mb-4">
-                    <Star className="text-yellow-400 fill-current" />
-                    <Star className="text-yellow-400 fill-current" />
-                    <Star className="text-yellow-400 fill-current" />
-                    <Star className="text-yellow-400 fill-current" />
-                    <Star className="text-yellow-400 fill-current" />
-                    <span className="ml-2 text-sm">(25 reviews)</span>
-                  </div>
-                  <button className="w-full bg-[#8B4513] text-white px-4 py-2 rounded hover:bg-[#A0522D] transition-colors">
-                    Add to Cart
-                  </button>
+                  <a
+      href="tel:+256773457817"
+      className="w-full bg-[#8B4513] text-white px-4 py-2 rounded hover:bg-[#A0522D] transition-colors inline-flex justify-center items-center"
+    >
+      Book Call
+    </a>
                 </div>
               </div>
             ))}

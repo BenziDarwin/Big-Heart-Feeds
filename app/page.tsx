@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#F5E6D3] text-[#8B4513]">
       <main>
-        <section className="py-20 bg-[url('/placeholder.svg?height=600&width=1600')] bg-cover bg-center">
-          <div className="container mx-auto px-4 text-center">
+      <section className="relative py-20 bg-[url('/images/bg-hero.jpg')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-[#8B4513] opacity-60 pointer-events-none"></div>
+          <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl font-bold mb-6 text-white shadow-text">Crafted for Health</h1>
             <p className="text-2xl mb-8 text-white shadow-text">A complete meal loved by dogs</p>
             <Link
@@ -49,7 +50,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/images/home.jpg"
                   alt="Happy dog eating Big Heart Feeds"
                   width={600}
                   height={400}

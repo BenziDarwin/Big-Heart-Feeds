@@ -11,7 +11,7 @@ export default function AboutPage() {
         
         <section className="mb-16">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2">
+            {/* <div className="md:w-1/2">
               <Image
                 src="/placeholder.svg?height=400&width=600"
                 alt="Big Heart Feeds team"
@@ -19,11 +19,11 @@ export default function AboutPage() {
                 height={400}
                 className="rounded-lg shadow-lg"
               />
-            </div>
-            <div className="md:w-1/2">
+            </div> */}
+            <div className="md:w-full px-10">
               <h2 className="text-3xl font-semibold mb-4">Our Story</h2>
               <p className="mb-4">
-                Founded in 2020, Big Heart Feeds emerged from a passion for providing high-quality nutrition to our canine companions. Our journey began in Nakuwadde-Bulenga, Uganda, where we noticed a gap in the market for locally-produced dog food that met international nutritional standards.
+                Founded in 2024, Big Heart Feeds emerged from a passion for providing high-quality nutrition to our canine companions. Our journey began in Nakuwadde-Bulenga, Uganda, where we noticed a gap in the market for locally-produced dog food that met international nutritional standards.
               </p>
               <p>
                 What started as a small family-run operation has grown into a trusted name in pet nutrition. Our commitment to quality, innovation, and the well-being of pets has been the driving force behind our success and continues to guide our path forward.
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </ul>
           </div>
         </section>
-
+{/* 
         <section>
           <h2 className="text-3xl font-semibold mb-8 text-center">Meet Our Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <p>Mike's meticulous approach and attention to detail ensure that every batch of Big Heart Feeds meets our rigorous quality standards.</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )
