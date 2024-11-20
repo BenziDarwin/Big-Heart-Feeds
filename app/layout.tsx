@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Premium dog food for health and happiness.",
     images: [
       {
-        url: "/images/og-image.jpg",  // Replace with your image path
+        url: "/images/adult-dog.jpg",  // Replace with your image path
         width: 1200,
         height: 630,
         alt: "Big Heart Feeds offers nutritious food for dogs",
